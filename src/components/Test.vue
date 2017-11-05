@@ -1,7 +1,15 @@
 <template lang=pug>
   div#test
-    p hello world
-    p this is a template
+    div#navBar
+      p 测试页面
+    div#container
+      div#self-test
+        a 自我测验
+      div#live-test
+        a 课堂练习
+
+
+
 </template>
 
 <script>
@@ -23,39 +31,46 @@
 
 </script>
 
-<style >
-  body {
-    font-family: Helvetica Neue, Arial, sans-serif;
-  }
+<style lang=stylus>
+  body
+    font-family Helvetica Neue, Arial, sans-serif
+  p
+    text-align center
+    color dodgerblue
+    font-size 15px
+    margin auto
 
-  polygon {
-    fill: #42b983;
-    opacity: .75;
-  }
+   #container a
+    text-align center
+    color dodgerblue
+    font-size 15px
+    margin auto
+  #navBar
+    display flex
+    align-items center
+    margin 0 auto 20px
+    width 100%
+    height 100px
+    text-align center
+    position relative
+    background-color antiquewhite
+  #container
+    border black solid thin
+    display flex
+    align-items center
 
-  circle {
-    fill: transparent;
-    stroke: #999;
-  }
-
-  text {
-    font-family: Helvetica Neue, Arial, sans-serif;
-    font-size: 10px;
-    fill: #666;
-  }
-
-  label {
-    display: inline-block;
-    margin-left: 10px;
-    width: 20px;
-  }
-
-  p {
-
-    text-align:center;
-    color: dodgerblue;
-    font-size:15px;
-    margin:auto;
-
-  }
+  #self-test
+    display flex
+    align-items center
+    margin auto
+    border solid black thin
+    width 40%
+    height 150px
+  #live-test
+    display flex
+    align-items center
+    margin auto
+    border solid black thin
+    width 40%
+    height 150px
 </style>

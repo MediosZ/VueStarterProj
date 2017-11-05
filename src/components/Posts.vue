@@ -1,14 +1,23 @@
 <template lang=pug>
   div#posts
-    p#words here are users' posts
+    div#navBar
+      p#img img
+      p 专栏文章
+    div#container
+      p this is the main Container for posts
+    div#footer
+      p this is the bottom of the page
+
 </template>
 
 <script>
   import api from '../api'
 
   export default {
-    data () {
+    data (){
       return {
+        counter : 0,
+        times :0
 
       }
     },
@@ -17,48 +26,57 @@
 
     },
     methods:{
-      greet:function(name){
-        alert('hello'+ name + 'welcome~');
+      greet:function(){
+        alert('hello welcome~');
       }
 
-    }
+    },
+    props:['message']
   }
 
 </script>
 
-<style >
-  body {
+<style lang=stylus>
+  body
     font-family: Helvetica Neue, Arial, sans-serif;
-  }
 
-  polygon {
-    fill: #42b983;
-    opacity: .75;
-  }
+  p
+    text-align center
+    color dodgerblue
+    font-size 15px
+    margin auto
 
-  circle {
-    fill: transparent;
-    stroke: #999;
-  }
+  #img
+    margin 10px
+    float left
+    width 70px
+    height 70px
+    border solid black
 
-  text {
-    font-family: Helvetica Neue, Arial, sans-serif;
-    font-size: 10px;
-    fill: #666;
-  }
+  #navBar
+    display flex
+    align-items center
+    margin 0 auto 20px
+    width 100%
+    height 100px
+    text-align center
+    position relative
+    background-color antiquewhite
 
-  label {
-    display: inline-block;
-    margin-left: 10px;
-    width: 20px;
-  }
 
-  p {
+  #container
+    display flex
+    justify-content center
+    margin 0 auto 20px
+    width 85%
+    height 200px
+    background-color #6afff3
 
-    text-align:center;
-    color: dodgerblue;
-    font-size:15px;
-    margin:auto;
-
-  }
+  #footer
+    display flex
+    justify-content center
+    margin 0 auto
+    width 85%
+    height 50px
+    background-color aquamarine
 </style>

@@ -1,7 +1,6 @@
 <template lang='pug'>
   div#app
     vue-loading(:is-show='isLoading' toast-text='请稍候')
-    //router-link(to="/Test") to test
     router-view
 </template>
 
